@@ -7,7 +7,7 @@ import java.util.regex.Pattern;
 public class ValidPassword {
 
 	// regex for password with minimum 8 Characters
-	String regex = "^[a-zA-Z0-9]{8,}$";
+	String regex = "^(?=.*[A-Z]).[a-zA-Z0-9]{8,}$";
 				
 	Scanner input = new Scanner(System.in);
 
