@@ -8,9 +8,12 @@ public class UserRegistrationSystem {
 	/*	ValidUserName validate = new ValidUserName();
 		validate.validateFirstName();
 		validate.validateLastName();
-	*/	
+		
 		ValidEmailID email = new ValidEmailID();
 		email.validateEmail();
+	*/
+		ValidPassword mobile = new ValidPassword();
+		mobile.validateMobile();
 		
 	}
 
