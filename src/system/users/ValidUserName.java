@@ -6,16 +6,17 @@ import java.util.regex.Pattern;
 
 public class ValidUserName {
 	
-	// regex for the user First Name with 1st char Upper and minimum 3 chars
-	String regEx = "^[A-Z]{1}[a-zA-Z0-9]{2,}";
+	// regex for the user Name with 1st char Upper and minimum 3 chars
+	String regex = "^[A-Z]{1}[a-zA-Z0-9]{2,}";
 	
 	Scanner input = new Scanner(System.in);
 
+	// validation of first name and checking with regex
 	void validateFirstName() {
 		
 		System.out.println("Enter user's First Name");
 		String firstName = input.nextLine();
-		Pattern pattern = Pattern.compile(regEx);
+		Pattern pattern = Pattern.compile(regex);
 		
 		Predicate<String> match = pattern.asPredicate();
 		boolean result = match.test(firstName);
@@ -28,11 +29,12 @@ public class ValidUserName {
 		}
 	}
 	
+	// validation of last name and checking with regex
 	void validateLastName() {
 		
 		System.out.println("Enter user's Last Name");
 		String lastName = input.nextLine();
-		Pattern pattern = Pattern.compile(regEx);
+		Pattern pattern = Pattern.compile(regex);
 		
 		Predicate<String> match = pattern.asPredicate();
 		boolean result = match.test(lastName);
@@ -44,11 +46,10 @@ public class ValidUserName {
 			System.out.println(lastName + " is Invalid last Name");
 		}
 	}
-
+	
+	// Constructor
 	public ValidUserName() {
-		super();
-		this.regEx = regEx;
-		this.input = input;
+
 	}
 	
 	
