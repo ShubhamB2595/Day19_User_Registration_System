@@ -6,30 +6,28 @@ import java.util.regex.Pattern;
 
 public class ValidPassword {
 
-	// regex for mobile number Country code follow by space and 10 digit number
+	// regex for password with minimum 8 Characters
+	String regex = "^[a-zA-Z0-9]{8,}$";
+				
+	Scanner input = new Scanner(System.in);
 
-		String regex = "^[0-9]{1,2}[' '][0-9]{10}";
-		
-		Scanner input = new Scanner(System.in);
+	//validation of password with regex
+	void validatePass() {
+					
+		System.out.println("Enter user's Password");
+		String pass = input.nextLine();
+		Pattern pattern = Pattern.compile(regex);
+					
+		Predicate<String> match = pattern.asPredicate();
+		boolean result = match.test(pass);
 
-		// validation of mobile number and checking with regex
-		void validateMobile() {
-			
-			System.out.println("Enter user's Mobile Number");
-			String numMobile = input.nextLine();
-			Pattern pattern = Pattern.compile(regex);
-			
-			Predicate<String> match = pattern.asPredicate();
-			boolean result = match.test(numMobile);
-			
-			if(result) {
-				System.out.println(numMobile + " is Valid mobile number");
-			}
-			else {
-				System.out.println(numMobile + " is Invalid mobile number");
-			}
+		if(result) {
+			System.out.println(pass + " is Valid password");
 		}
-		
+		else {
+			System.out.println(pass + " is Invalid password");
+		}
+	}
 		public ValidPassword() {
 			
 		}

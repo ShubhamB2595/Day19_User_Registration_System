@@ -11,9 +11,12 @@ public class UserRegistrationSystem {
 		
 		ValidEmailID email = new ValidEmailID();
 		email.validateEmail();
-	*/
-		ValidPassword mobile = new ValidPassword();
+	
+		ValidMobile mobile = new ValidMobile();
 		mobile.validateMobile();
+	*/
+		ValidPassword pass = new ValidPassword();
+		pass.validatePass();
 		
 	}
 
