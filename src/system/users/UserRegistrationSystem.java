@@ -7,6 +7,7 @@ public class UserRegistrationSystem {
 		System.out.println("Welcome to User Registration Program");
 		ValidUserName validate = new ValidUserName();
 		validate.validateFirstName();
+		validate.validateLastName();
 	}
 
 }

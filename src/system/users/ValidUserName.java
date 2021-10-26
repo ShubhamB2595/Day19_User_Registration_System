@@ -27,6 +27,23 @@ public class ValidUserName {
 			System.out.println(firstName + " is Invalid first Name");
 		}
 	}
+	
+	void validateLastName() {
+		
+		System.out.println("Enter user's Last Name");
+		String lastName = input.nextLine();
+		Pattern pattern = Pattern.compile(regEx);
+		
+		Predicate<String> match = pattern.asPredicate();
+		boolean result = match.test(lastName);
+		
+		if(result) {
+			System.out.println(lastName + " is Valid last Name");
+		}
+		else {
+			System.out.println(lastName + " is Invalid last Name");
+		}
+	}
 
 	public ValidUserName() {
 		super();
